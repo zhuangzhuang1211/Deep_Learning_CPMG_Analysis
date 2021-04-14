@@ -299,7 +299,8 @@ def gen_TPk_AB_candidates(AB_target_set: "[[A1,B1],[A2,B2],..]", is_hierarchical
     B_side_max, B_target_gap, B_side_gap, A_target_margin, A_side_margin, A_far_side_margin,\
     class_batch, class_num, spin_zero_scale, distance_btw_target_side, side_candi_num = args
 
-    total_AB_candi = np.zeros((class_num, len(AB_target_set)*class_batch, 4+side_candi_num, 2)) 
+    total_AB_candi = np.zeros((class_num, len(AB_target_set)*class_batch, 4+side_candi_num, 2))
+    print(total_AB_candi.shape)
                     # CAUTION: '3rd dimension' of 'total_AB_candi' is determined by the output of 'gen_AB_candidates' function
     total_Y_train_arr = np.zeros((class_num, len(AB_target_set)*class_batch, class_num)) # one-hot vector for each class
     
